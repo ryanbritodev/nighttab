@@ -471,6 +471,13 @@
                 toggleColumns();
             }
         })();
+       // Força abrir cada atalho em uma nova aba
+document.querySelectorAll('a.bookmark-card').forEach(link => {
+    link.addEventListener('click', e => {
+        e.preventDefault();
+        window.open(link.href, '_blank', 'noopener,noreferrer');
+    });
+});
     </script>
 </body>
 </html>
