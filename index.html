@@ -32,10 +32,15 @@
             -webkit-tap-highlight-color: transparent;
         }
 
+        /* A cor de fundo fica só no html: se o body tiver fundo próprio, ele cobre
+           as camadas .bg-layer e .bg-overlay (z-index negativo) e a imagem não aparece. */
+        html {
+            background-color: #04122c;
+        }
+
         html, body {
             min-height: 100%;
             width: 100%;
-            background-color: #04122c;
             font-family: 'Manrope', sans-serif;
             color: var(--text-main);
             overflow-x: hidden;
